@@ -48,7 +48,6 @@ endif
 
 # Start room: Dead end
 cd filesystem/pokey/rooms/dead-end
-cd `pwd -P` # delete this line
 
 # Global variables
 set computer_active = 0             # flag: whether the computer is active or not, used to determine if player can type commands into it
@@ -73,28 +72,28 @@ echo "There is a shovel here."
 game_loop:
 
 echo -n ">"
-set input = $<:q                                        # read user input, ":q" make it read as a pure string, without it wiil cause error
+set input = $<:q    # read user input, ":q" make it read as a pure string, without it wiil cause error
 
-# Prevent wildcard expansion while parsing user input
-set noglob
+set noglob          # prevent wildcard expansion while parsing user input
 
 set input = `echo "$input" | tr 'A-Z' 'a-z'`            # convert input to lowercase, so that the game is case-insensitive
 set input = `echo "$input" | sed 's/[ :;,][ :;,]*/ /g'` # replace the delimiters (space, colon, semicolon and comma) with space
 
 set args = ( $input:x )   # split input into arguments
 
-if ( "$#args" == 0 ) goto game_loop
+if ( "$#args" == 0 ) then
+    unset noglob
+    goto game_loop
+endif
 
 set args_padded = ( $args:q "" "" "" "" )   # pad arguments to avoid csh parsing issues with missing arguments
                                             # e.g. 
                                             #   type cmd "get key"
                                             #   then args[3] will be empty, if we try to access args[3], it will cause "Subscript out of range" error!
 
-# Restore normal shell behavior
-unset noglob
+unset noglob    # restore normal shell behavior
 
 set cmd = "$args_padded[1]" # the first argument is the user command
-
 
 # Execute command
 switch ("$cmd")
@@ -125,7 +124,7 @@ switch ("$cmd")
                     endif
                 end
                 if ( $is_visited == 0 ) then
-                    set visited_rooms = ( $visited_rooms "$cur_room " )
+                    set visited_rooms = ( $visited_rooms "$cur_room" )
                 endif
 
                 # Display description
@@ -572,6 +571,7 @@ switch ("$cmd")
                     breaksw
                 case key.o:
                     chmod 755 ../../rooms/old-building-hallway # when player drop the key, change the permission of old-building-hallway
+                    breaksw
                 case bracelet.o:
                     mv emerald.o . >& /dev/null
                     breaksw
@@ -824,9 +824,7 @@ switch ("$cmd")
 
         # pokey environment variables initialization
         set pokey_pwd = "/usr/toukmond" # current directory in pokey, 
-                                        # initialized to "/usr/toukmond" since it's the home directory of toukmond, 
-                                        # and it's also the only directory that player can write in pokey at the beginning.
-        
+                                        # initialized to "/usr/toukmond" since it's the home directory of toukmond,         
         set pokey_root = "$game_root/filesystem/pokey" # pokey root directory in real filesystem, used for path normalization in cd and ls command in pokey
 
 
@@ -1119,7 +1117,7 @@ switch ("$cmd")
                 endif
 
                 # Check whether it is an ASCII file
-                if ( "$file_name" == "description" || "$file_name" == "panel_description" ) then
+                if ( "$file_name" == "description" ) then
                     tail -n +2 "$file_path" # skip the first line
                 else
                     echo "Ascii files only."
@@ -1181,4 +1179,3 @@ switch ("$cmd")
         echo "I don't understand that."
         goto game_loop
 endsw
-
