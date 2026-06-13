@@ -631,7 +631,7 @@ pwd -P
 
 ### 問題
 
-CPU board 可被稱為：
+CPU board 可被視為：
 
 ```plain
 board
@@ -640,7 +640,7 @@ chip
 cpu
 ```
 
-Bracelet 也可被稱為：
+Bracelet 也可被視為：
 
 ```plain
 bracelet
