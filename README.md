@@ -63,7 +63,7 @@ chmod +x dunnet
 
 每個房間都是 `filesystem/pokey/rooms/` 底下的一個資料夾，所有房間如下：
 
-```
+```plain
 bear-hangout
 building-front
 computer-room
@@ -170,18 +170,18 @@ filesystem/pokey/usr/toukmond
 
 部分物品具有多種名稱。例如：
 
-```
+```plain
 bracelet
 emerald
 ```
 
 都代表：
 
-```
+```plain
 bracelet.o
 ```
 
-```
+```plain
 board
 card
 chip
@@ -190,7 +190,7 @@ cpu
 
 都代表：
 
-```
+```plain
 board.o
 ```
 
@@ -323,19 +323,15 @@ $args_padded[4]
 
 | 指令 | 作用 | 實作方式 |
 | --- | --- | --- |
-| `n`、`s`、`e`、`w`、
-`ne`、`nw`、`se`、`sw`、
-`u`、`d` | 移動到其他房間 | 檢查目前資料夾中是否存在相同名稱的 symbolic link，存在時使用 `cd` 進行移動，並透過 `pwd -P` 取得該房間絕對路徑。 |
+| `n`、`s`、`e`、`w`、`ne`、`nw`、`se`、`sw`、`u`、`d` | 移動到其他房間 | 檢查目前資料夾中是否存在相同名稱的 symbolic link，存在時使用 `cd` 進行移動，並透過 `pwd -P` 取得該房間絕對路徑。 |
 | `l` | look，用於查看目前房間 | 讀取目前房間中的 `description`，再列出房間內的 `.o` 檔案，將檔名轉換為對應的物品描述。 |
 | `x [<item>]` | examine，檢查指定物品；若無輸入物品名稱，則變成輸出當前房間資訊，效果與`l`相同 | 根據玩家輸入的名稱，使用 `cat` 輸出對應物品的 `.o` 檔案 *(或一般檔案)* 中的文字內容。 |
 | `i` | 查看 inventory | 列出 `../../usr/toukmond/`中，所有 `.o` 檔案的名稱，忽略 symbolic link。 |
 | `get <item>` | 撿取物品 | 使用 `mv` 將目前房間內的指定物品移動到 `../../usr/toukmond/`，再用 `touch` 更新 timestamp。 |
-| `get all` | 撿取房間內所有可撿取物品 | 使用 `ls -tr *.o` 找出物品，跳過隱藏物品 *(以`.`作為檔名開頭)* 、不可撿取物品，再依序移動到 inventory — `../../usr/toukmond/`。
-若有撿取到帶有 symbolic link 的物品 (例如: cpu、bracelet)，需要同步移動 symbolic link 到 inventory 中。 |
+| `get all` | 撿取房間內所有可撿取物品 | 使用 `ls -tr *.o` 找出物品，跳過隱藏物品 *(以`.`作為檔名開頭)* 、不可撿取物品，再依序移動到 inventory — `../../usr/toukmond/`。    若有撿取到帶有 symbolic link 的物品 (例如: cpu、bracelet)，需要同步移動 symbolic link 到 inventory 中。 |
 | `drop <item>` | 放下物品 | 使用 `mv` 將 inventory 內的物品移動到目前房間，再用 `touch` 更新 timestamp。 |
 | `dig` | 挖掘地面 | 先檢查 inventory 中是否擁有`shovel.o`。若玩家位於指定房間 `fork`，會顯示隱藏的 CPU board。 |
-| `put <item1> in <item2>` | 將物品放入另一個物品 | 目前主要用於將 CPU board 放入 computer，使 computer 啟動。
-介係詞沒有硬性規定要使用`in`。 |
+| `put <item1> in <item2>` | 將物品放入另一個物品 | 目前主要用於將 CPU board 放入 computer，使 computer 啟動。  介係詞沒有硬性規定要使用`in`。 |
 | `type` | 操作 computer | 只有位於 `computer-room` 時有效。若 computer 已啟動，玩家可以進入 `pokey` 登入流程。 |
 | `exit`、`quit` | 結束遊戲 | 顯示目前分數後離開程式。 |
 
@@ -355,14 +351,14 @@ type
 
 帳號與密碼可以透過己查 mailroom 的 bin 來得到，分別為：
 
-```
+```plain
 login: toukmond
 password: robert
 ```
 
 登入成功後，玩家會進入模擬 UNIX 環境：
 
-```
+```plain
 UNIX System V, Release 2.2 (pokey)
 ```
 
@@ -392,7 +388,7 @@ $game_root/filesystem/pokey
 
 處理 `cd` 與 `ls` 時，程式會暫時使用真實的 `cd` 與 `pwd -P` 正規化路徑，處理：
 
-```
+```plain
 .
 ..
 重複的 /
@@ -428,7 +424,7 @@ set pokey_root = "$game_root/filesystem/pokey"
 
 一般冒險模式會將：
 
-```
+```plain
 :
 ;
 ,
@@ -456,7 +452,7 @@ x *
 
 例如，當房間內有：
 
-```
+```plain
 lamp.o
 shovel.o
 ```
@@ -469,7 +465,7 @@ x *
 
 可能被解讀為：
 
-```
+```plain
 x lamp.o shovel.o
 ```
 
@@ -491,7 +487,7 @@ unset noglob
 
 `tcsh` 的 `noglob` 變數會停用 filename substitution，因此：
 
-```
+```plain
 *
 ?
 [abc]
@@ -637,7 +633,7 @@ pwd -P
 
 CPU board 可被稱為：
 
-```
+```plain
 board
 card
 chip
@@ -646,7 +642,7 @@ cpu
 
 Bracelet 也可被稱為：
 
-```
+```plain
 bracelet
 emerald
 ```
@@ -657,7 +653,7 @@ emerald
 
 使用一個主要 `.o` 檔案代表真實物品：
 
-```
+```plain
 board.o
 bracelet.o
 ```
@@ -682,7 +678,7 @@ ls
 
 目前版本會顯示：
 
-```
+```plain
 boulder.o
 ```
 
