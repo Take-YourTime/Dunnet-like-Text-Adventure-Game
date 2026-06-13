@@ -1,7 +1,5 @@
 # Dunnet-like Text Adventure Game
 
-作者：B113040045 許育菖
-
 使用語言：C Shell (`csh` / `tcsh`)
 
 主程式檔案：`dunnet`
