@@ -1,0 +1,526 @@
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>>Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>You currently have:
+A lamp
+>You currently have:
+A lamp
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You must supply an object.
+>You must supply an object.
+>Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>You must supply an object
+>You don't have that.
+>You don't have that.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>I don't understand that.
+>I don't understand that.
+>I don't understand that.
+>Taken.  
+>Done.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>Taken.  
+>Nothing to take.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+>Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+>You currently have:
+A lamp
+A shovel
+>I do not see that here.
+>I don't see that here.
+>I don't see that here.
+>You don't have that.
+>You don't have that.
+>You don't have that.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You don't have that.
+>You don't have that.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>You cannot take that.
+>You cannot take that.
+>E/W Dirt road
+You are on the continuation of a dirt road.  There are more trees on
+both sides of you.  The road continues to the east and west.
+There is a large boulder here.
+>E/W Dirt road
+You are on the continuation of a dirt road.  There are more trees on
+both sides of you.  The road continues to the east and west.
+There is a large boulder here.
+>E/W Dirt road
+You are on the continuation of a dirt road.  There are more trees on
+both sides of you.  The road continues to the east and west.
+There is a large boulder here.
+>You currently have:
+A lamp
+A shovel
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You cannot take that.
+>You cannot take that.
+>It is just a boulder.  It cannot be moved.
+>It is just a boulder.  It cannot be moved.
+>You don't have that.
+>You don't have that.
+>I don't know how to combine those objects.  Perhaps you should
+just try dropping it.
+>You cannot take that.
+>I see nothing special about that.
+>I see nothing special about that.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>Nothing to take.
+>Nothing to take.
+>I don't know what that is.
+>You cannot take that.
+>You cannot take that.
+>I see nothing special about that.
+>It is just a boulder.  It cannot be moved.
+>It is a normal shovel with a price tag attached that says $19.99.
+>I don't see that here.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>You don't have that.
+>Nothing to take.
+>Fork
+You are at a fork of two passages, one to the northeast, and one to the
+southeast.  The ground here seems very soft. You can also go back west.
+>I do not see that here.
+>I don't see that here.
+>I think you found something.
+>Fork
+You are at a fork of two passages, one to the northeast, and one to the
+southeast.  The ground here seems very soft. You can also go back west.
+There is a CPU card here.
+>Fork
+You are at a fork of two passages, one to the northeast, and one to the
+southeast.  The ground here seems very soft. You can also go back west.
+There is a CPU card here.
+>You currently have:
+A lamp
+A shovel
+>Digging here reveals nothing.
+>Digging here reveals nothing.
+>Digging here reveals nothing.
+>Taken.  
+>I do not see that here.
+>The CPU board has a VAX chip on it.  It seems to have
+2 Megabytes of RAM onboard.
+>The CPU board has a VAX chip on it.  It seems to have
+2 Megabytes of RAM onboard.
+>Done.
+>Taken.  
+>Nothing to take.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>I don't know how to combine those objects.  Perhaps you should
+just try dropping it.
+>I don't know how to combine those objects.  Perhaps you should
+just try dropping it.
+>The CPU board has a VAX chip on it.  It seems to have
+2 Megabytes of RAM onboard.
+>I do not see that here.
+>The CPU board has a VAX chip on it.  It seems to have
+2 Megabytes of RAM onboard.
+>You currently have:
+A lamp
+A shovel
+A computer board
+>It is a normal shovel with a price tag attached that says $19.99.
+>SE/NW road
+You are on a southeast/northwest road.
+There is some food here.
+>Done.
+>Done.
+>Done.
+>You can't go that way.
+>Fork
+>SE/NW road
+There is some food here.
+There is a lamp nearby.
+There is a shovel here.
+There is a CPU card here.
+>Some food: Taken.  
+A lamp: Taken.  
+A shovel: Taken.  
+A computer board: Taken.  
+>Fork
+>E/W Dirt road
+There is a large boulder here.
+>Done.
+>I don't know what that is.
+>Done.
+>Done.
+>Done.
+>You currently have:
+>Fork
+>E/W Dirt road
+There is a large boulder here.
+There is some food here.
+There is a lamp nearby.
+There is a shovel here.
+There is a CPU card here.
+>Some food: Taken.  
+A lamp: Taken.  
+A shovel: Taken.  
+A computer board: Taken.  
+>Fork
+>SE/NW road
+>Bear hangout
+You are standing at the end of a road.  A passage leads back to the
+northwest.
+There is a ferocious bear here!
+>Done.
+>Done.
+>Done.
+>SE/NW road
+>Bear hangout
+There is a ferocious bear here!
+There is a lamp nearby.
+There is a shovel here.
+There is a CPU card here.
+>A lamp: Taken.  
+A shovel: Taken.  
+A computer board: Taken.  
+>SE/NW road
+>Bear hangout
+There is a ferocious bear here!
+>You cannot take that.
+>Done.
+The bear takes the food and runs away with it. He left something behind.
+>Bear hangout
+You are standing at the end of a road.  A passage leads back to the
+northwest.
+There is a shiny brass key here.
+>You can't go that way.
+>A brass key: Taken.  
+>You can't go that way.
+>You don't have that.
+>Done.
+>Done.
+>Done.
+>You currently have:
+A brass key
+>Hidden area
+There is an emerald bracelet here.
+>Bear hangout
+There is a CPU card here.
+There is a lamp nearby.
+There is a shovel here.
+>A computer board: Taken.  
+A lamp: Taken.  
+A shovel: Taken.  
+>SE/NW road
+>You can't go that way.
+>Fork
+>NE/SW road
+You are on a northeast/southwest road.
+>Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+>I don't know how to combine those objects.  Perhaps you should
+just try dropping it.
+>You don't have that.
+>That indirect object is not here.
+>Old Building hallway
+You are in the hallway of an old building.  There are rooms to the east
+and west, and doors leading out to the north and south.
+>Mailroom
+You are in a mailroom.  There are many bins where the mail is usually
+kept.  The exit is to the west.
+>I don't know how to combine those objects.  Perhaps you should
+just try dropping it.
+>Mailroom
+You are in a mailroom.  There are many bins where the mail is usually
+kept.  The exit is to the west.
+>Mailroom
+You are in a mailroom.  There are many bins where the mail is usually
+kept.  The exit is to the west.
+>You currently have:
+A brass key
+A computer board
+A lamp
+A shovel
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>Old Building hallway
+>You can't go that way.
+>You can't go that way.
+>You can't go that way.
+>Building front
+>You can't go that way.
+>You can't go that way.
+>I don't see that here.
+>I don't see that here.
+>I do not see that here.
+>I do not see that here.
+>That indirect object is not here.
+>You don't have that.
+>Done.
+>Taken.  
+>Done.
+>A brass key: Taken.  
+>You don't have that.
+>Done.
+>You don't have that.
+>A brass key: Taken.  
+>You can't go that way.
+>You can't go that way.
+>Done.
+>You don't have that.
+>You don't have that.
+>Done.
+>Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+There is a shiny brass key here.
+There is a CPU card here.
+>Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+There is a shiny brass key here.
+There is a CPU card here.
+>You currently have:
+A lamp
+A shovel
+>I don't see that here.
+>I don't see that here.
+>I do not see that here.
+>You don't have that.
+>There is nothing here on which you could type.
+>There is nothing here on which you could type.
+>You don't have that.
+>That indirect object is not here.
+>That indirect object is not here.
+>You don't have that.
+>You don't have that.
+>Taken.  
+>That indirect object is not here.
+>A brass key: Taken.  
+>That indirect object is not here.
+>Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+>Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+>You currently have:
+A lamp
+A shovel
+A computer board
+A brass key
+>I don't see that here.
+>I don't see that here.
+>That indirect object is not here.
+>I do not see that here.
+>I do not see that here.
+>Old Building hallway
+>Computer room
+You are in a computer room.  It seems like most of the equipment has
+been removed.  There is a VAX 11/780 in front of you, however, with
+one of the cabinets wide open.  A sign on the front of the machine
+says: This VAX is named ‘pokey’.  To type on the console, use the
+‘type’ command.  The exit is to the east.
+The panel lights are steady and motionless.
+>You currently have:
+A lamp
+A shovel
+A computer board
+A brass key
+>I don't see that here.
+>As you put the CPU board in the computer, it immediately springs to life.
+The lights start flashing, and the fans seem to startup.
+>
+
+UNIX System V, Release 2.2 (pokey)
+
+login: password: 
+Welcome to Unix
+
+Please clean up your directories.  The filesystem is getting full.
+Our tcp/ip link to gamma is a little flaky, but seems to work.
+The current version of ftp can only send files from your home
+directory, and deletes them after they are sent!  Be careful.
+
+Note: Restricted bourne shell in use.
+
+$ /usr/toukmond
+$ total 467
+drwxr-xr-x  3 toukmond restricted      512 Jan 1 1970 .
+drwxr-xr-x  3 root     staff          2048 Jan 1 1970 ..
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ls
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ftp
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 echo
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 exit
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 pwd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 rlogin
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ssh
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 uncompress
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cat
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 paper.o.Z
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 lamp.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 shovel.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 key.o
+$ No such directory.
+$ No such directory.
+$ No such directory.
+$ No such directory.
+$ pokey stress test 
+$ alpha beta gamma 
+$ '*' 
+$ test | cat 
+$ redirected > /dev/null 
+$ File not found.
+$ $ /usr/toukmond
+$ No such directory.
+$ /usr/toukmond
+$ true: not found.
+$ false: not found.
+$ nosuchcommand: not found.
+$ Uncompress command failed.
+$ $ Uncompress command failed.
+$ total 467
+drwxr-xr-x  3 toukmond restricted      512 Jan 1 1970 .
+drwxr-xr-x  3 root     staff          2048 Jan 1 1970 ..
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ls
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ftp
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 echo
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 exit
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 pwd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 rlogin
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ssh
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 uncompress
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cat
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 lamp.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 shovel.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 key.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 paper.o
+$ No such directory.
+$ Uncompress command failed.
+$ Uncompress command failed.
+$ Ascii files only.
+$ e: not found.
+$ ne: not found.
+$ w: not found.
+$ i: not found.
+$ type: not found.
+$ toukmond: not found.
+$ robert: not found.
+$ /usr/toukmond
+$ total 467
+drwxr-xr-x  3 toukmond restricted      512 Jan 1 1970 .
+drwxr-xr-x  3 root     staff          2048 Jan 1 1970 ..
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ls
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ftp
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 echo
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 exit
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 pwd
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 rlogin
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 ssh
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 uncompress
+-rwxr-xr-x  1 toukmond restricted    10423 Jan 1 1970 cat
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 lamp.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 shovel.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 key.o
+-rwxr-xr-x  1 toukmond restricted        0 Jan 1 1970 paper.o
+$ No such directory.
+$ Ascii files only.
+$ second login complete 
+$ nosuchcommand_again: not found.
+$ 
+You step back from the console.
+
+>You currently have:
+A lamp
+A shovel
+A brass key
+A slip of paper
+>The paper says: Don't forget to type ‘help’ for help.  Also, remember
+this word: ‘worms’
+>The paper says: Don't forget to type ‘help’ for help.  Also, remember
+this word: ‘worms’
+>Computer room
+You are in a computer room.  It seems like most of the equipment has
+been removed.  There is a VAX 11/780 in front of you, however, with
+one of the cabinets wide open.  A sign on the front of the machine
+says: This VAX is named ‘pokey’.  To type on the console, use the
+‘type’ command.  The exit is to the east.
+The panel lights are flashing in a seemingly organized pattern.
+>
+You have scored 0 out of a possible 90 points.

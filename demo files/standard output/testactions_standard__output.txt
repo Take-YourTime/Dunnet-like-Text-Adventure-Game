@@ -1,0 +1,219 @@
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>Taken.  
+>Nothing to take.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>I do not see that here.
+>You cannot take that.
+>You cannot take that.
+>E/W Dirt road
+You are on the continuation of a dirt road.  There are more trees on
+both sides of you.  The road continues to the east and west.
+There is a large boulder here.
+>You cannot take that.
+>You cannot take that.
+>I see nothing special about that.
+>It is just a boulder.  It cannot be moved.
+>It is a normal shovel with a price tag attached that says $19.99.
+>I don't see that here.
+>I don't know what that is.
+>I don't know what that is.
+>I don't know what that is.
+>You don't have that.
+>Nothing to take.
+>Fork
+You are at a fork of two passages, one to the northeast, and one to the
+southeast.  The ground here seems very soft. You can also go back west.
+>I do not see that here.
+>I don't see that here.
+>I think you found something.
+>The CPU board has a VAX chip on it.  It seems to have
+2 Megabytes of RAM onboard.
+>Taken.  
+>The CPU board has a VAX chip on it.  It seems to have
+2 Megabytes of RAM onboard.
+>You currently have:
+A lamp
+A shovel
+A computer board
+>It is a normal shovel with a price tag attached that says $19.99.
+>SE/NW road
+You are on a southeast/northwest road.
+There is some food here.
+>Done.
+>Done.
+>Done.
+>You can't go that way.
+>Fork
+>SE/NW road
+There is some food here.
+There is a lamp nearby.
+There is a shovel here.
+There is a CPU card here.
+>Some food: Taken.  
+A lamp: Taken.  
+A shovel: Taken.  
+A computer board: Taken.  
+>Fork
+>E/W Dirt road
+There is a large boulder here.
+>Done.
+>I don't know what that is.
+>Done.
+>Done.
+>Done.
+>You currently have:
+>Fork
+>E/W Dirt road
+There is a large boulder here.
+There is some food here.
+There is a lamp nearby.
+There is a shovel here.
+There is a CPU card here.
+>Some food: Taken.  
+A lamp: Taken.  
+A shovel: Taken.  
+A computer board: Taken.  
+>Fork
+>SE/NW road
+>Bear hangout
+You are standing at the end of a road.  A passage leads back to the
+northwest.
+There is a ferocious bear here!
+>Done.
+>Done.
+>Done.
+>SE/NW road
+>Bear hangout
+There is a ferocious bear here!
+There is a lamp nearby.
+There is a shovel here.
+There is a CPU card here.
+>A lamp: Taken.  
+A shovel: Taken.  
+A computer board: Taken.  
+>SE/NW road
+>Bear hangout
+There is a ferocious bear here!
+>You cannot take that.
+>Done.
+The bear takes the food and runs away with it. He left something behind.
+>Bear hangout
+You are standing at the end of a road.  A passage leads back to the
+northwest.
+There is a shiny brass key here.
+>Hidden area
+There is an emerald bracelet here.
+>A bracelet: Taken.  
+>Bear hangout
+There is a shiny brass key here.
+>Done.
+>Done.
+>Done.
+>Done.
+>You currently have:
+>Hidden area
+>Bear hangout
+There is a shiny brass key here.
+There is an emerald bracelet here.
+There is a CPU card here.
+There is a lamp nearby.
+There is a shovel here.
+>A brass key: Taken.  
+A bracelet: Taken.  
+A computer board: Taken.  
+A lamp: Taken.  
+A shovel: Taken.  
+>SE/NW road
+>You can't go that way.
+>Fork
+>NE/SW road
+You are on a northeast/southwest road.
+>Building front
+You are at the end of the road.  There is a building in front of you
+to the northeast, and the road leads back to the southwest.
+>I don't know how to combine those objects.  Perhaps you should
+just try dropping it.
+>You don't have that.
+>That indirect object is not here.
+>Old Building hallway
+You are in the hallway of an old building.  There are rooms to the east
+and west, and doors leading out to the north and south.
+>Mailroom
+You are in a mailroom.  There are many bins where the mail is usually
+kept.  The exit is to the west.
+>I don't know how to combine those objects.  Perhaps you should
+just try dropping it.
+>You don't have that.
+>Done.
+>You don't have that.
+>A brass key: Taken.  
+>Old Building hallway
+>Computer room
+You are in a computer room.  It seems like most of the equipment has
+been removed.  There is a VAX 11/780 in front of you, however, with
+one of the cabinets wide open.  A sign on the front of the machine
+says: This VAX is named ‘pokey’.  To type on the console, use the
+‘type’ command.  The exit is to the east.
+The panel lights are steady and motionless.
+>Done.
+>You don't have that.
+>You don't have that.
+>Done.
+>You don't have that.
+>A brass key: Taken.  
+A computer board: Taken.  
+>As you put the CPU board in the computer, it immediately springs to life.
+The lights start flashing, and the fans seem to startup.
+>I do not see that here.
+>Old Building hallway
+>Computer room
+The panel lights are flashing in a seemingly organized pattern.
+>You currently have:
+A bracelet
+A lamp
+A shovel
+A brass key
+>I don't see that here.
+>
+
+UNIX System V, Release 2.2 (pokey)
+
+login: password: 
+Welcome to Unix
+
+Please clean up your directories.  The filesystem is getting full.
+Our tcp/ip link to gamma is a little flaky, but seems to work.
+The current version of ftp can only send files from your home
+directory, and deletes them after they are sent!  Be careful.
+
+Note: Restricted bourne shell in use.
+
+$ $ Uncompress command failed.
+$ 
+You step back from the console.
+
+>Old Building hallway
+>Computer room
+The panel lights are flashing in a seemingly organized pattern.
+>You currently have:
+A bracelet
+A lamp
+A shovel
+A brass key
+A slip of paper
+>
+You have scored 0 out of a possible 90 points.

@@ -6,7 +6,7 @@ unset histchars
 # 
 # B113040045 許育菖
 # UNIX HW
-# 2026/06/24
+# 2026/05/24
 
 
 # This is a simple text-based adventure game implemented in csh script, 
@@ -25,22 +25,21 @@ cd "$script_dir"
 set game_root = `pwd -P`
 
 # Reset and untar filesystem for clean state
-if ( -f ~/filesystem.tar ) then
+if ( -f ./filesystem.tar ) then
+    # Remove old filesystem folder
     chmod -R 755 filesystem >& /dev/null
     rm -rf filesystem
-    tar -xf ~/filesystem.tar >& /dev/null
-    ln -sf ../dead-end/trees filesystem/pokey/rooms/dead-end/coconut
-    ln -sf ../dead-end/trees filesystem/pokey/rooms/dead-end/coconuts
-    ln -sf ../e-w-dirt-road/trees filesystem/pokey/rooms/e-w-dirt-road/coconut
-    ln -sf ../e-w-dirt-road/trees filesystem/pokey/rooms/e-w-dirt-road/coconuts
-else if ( -f ./filesystem.tar ) then
-    chmod -R 755 filesystem >& /dev/null
-    rm -rf filesystem
+
+    # Untar filesystem.tar
     tar -xf ./filesystem.tar >& /dev/null
-    ln -sf ../dead-end/trees filesystem/pokey/rooms/dead-end/coconut
-    ln -sf ../dead-end/trees filesystem/pokey/rooms/dead-end/coconuts
-    ln -sf ../e-w-dirt-road/trees filesystem/pokey/rooms/e-w-dirt-road/coconut
-    ln -sf ../e-w-dirt-road/trees filesystem/pokey/rooms/e-w-dirt-road/coconuts
+    chmod 755 filesystem/pokey/rooms/old-building-hallway # when player get the key, change the permission of old-building-hallway to allow player to enter it
+    
+    # Copy coconut files to e-w-dirt-road    
+    cp filesystem/pokey/rooms/dead-end/coconuts filesystem/pokey/rooms/e-w-dirt-road/coconuts
+    ln -sf ./coconuts filesystem/pokey/rooms/e-w-dirt-road/coconut
+    
+    # Create symbolic link for old-building-hallway/sw to building-front
+    ln -sf ../building-front filesystem/pokey/rooms/old-building-hallway/sw
 else if ( ! -d filesystem ) then
     echo "Error: filesystem.tar not found and filesystem directory does not exist."
     exit 1
@@ -52,7 +51,10 @@ cd filesystem/pokey/rooms/dead-end
 # Global variables
 set computer_active = 0             # flag: whether the computer is active or not, used to determine if player can type commands into it
 set is_pokey_login = 0              # flag: whether the player has successfully login pokey or not, used to determine whether player can access pokey's filesystem and use pokey's commands
+set has_key = 0                     # flag: whether the player has the key or not, used to determine whether player can enter old-building-hallway
 set visited_rooms = ( `pwd -P` )    # store the physical path of visited rooms, used to determine whether to display the full description or the short description of the room.
+
+
 
 # Display start room info
 #   The starting point is set at "Dead end",
@@ -97,20 +99,68 @@ set cmd = "$args_padded[1]" # the first argument is the user command
 
 # Execute command
 switch ("$cmd")
+    # Movement Commands (full names)
+    # Reset command to the short name, and skip to "move_command"
+    case up:
+        set cmd = "u"
+        goto move_command
+    case down:
+        set cmd = "d"
+        goto move_command
+    case north:
+        set cmd = "n"
+        goto move_command
+    case south:
+        set cmd = "s"
+        goto move_command
+    case east:
+        set cmd = "e"
+        goto move_command
+    case west:
+        set cmd = "w"
+        goto move_command
+    case northeast:
+    	set cur_room_name = `pwd -P | sed 's|.*/||'` # current room name to leave
+        # Check if the player is trying enter the old-building-hallway without key
+        if ( "$has_key" == 0 && "$cur_room_name" == "building-front" ) then
+            echo "You don't have a key that can open this door."
+            goto game_loop
+        endif
+    	
+        set cmd = "ne"
+        goto move_command
+    case northwest:
+        set cmd = "nw"
+        goto move_command
+    case southeast:
+        set cmd = "se"
+        goto move_command
+    case southwest:
+        set cmd = "sw"
+        goto move_command
+    
     # Movement Commands
+    case ne: # northeast
+    	set cur_room_name = `pwd -P | sed 's|.*/||'` # current room name to leave
+        # Check if the player is trying enter the old-building-hallway without key
+        if ( "$has_key" == 0 && "$cur_room_name" == "building-front" ) then
+            echo "You don't have a key that can open this door."
+            goto game_loop
+        endif
+    case nw: # northwest
+    case se: # southeast
+    case sw: # southwest
     case u: # up
     case d: # down
     case n: # north
     case s: # south
     case e: # east
     case w: # west
-    case ne: # northeast
-    case nw: # northwest
-    case se: # southeast
-    case sw: # southwest
-        if ( -e "$cmd" ) then   # If the link file exists
-            cd "$cmd" >& /dev/null      # Try to cd into the link, ">& /dev/null" is use to ignore the error message
-            if ( $status == 0 ) then    # If cd was successful
+        move_command:
+        if ( -e "$cmd" ) then  # If the link file exists
+            cd "$cmd" >& /dev/null          # Try to cd into the link, ">& /dev/null" is use to ignore the error message
+            
+            if ( $status == 0 ) then        # If cd was successful
                 cd `pwd -P`
                 
                 set cur_room = `pwd -P` # current room physical path
@@ -180,6 +230,7 @@ switch ("$cmd")
             endif
         else
             echo "You can't go that way."
+            endif
         endif
         goto game_loop
 
@@ -191,6 +242,7 @@ switch ("$cmd")
     case l
     case look:
     # read command
+    case describe:
     case read:
         # If there is no argument, display the current room description
         if ( "$#args" < 2 ) then
@@ -274,7 +326,7 @@ switch ("$cmd")
                 if ( -f "${item}" || -l "${item}" ) then
                     cat "${item}"
                 else
-                    echo "I do not see that here."
+                    echo "I don't see that here."
                 endif
                 goto game_loop
             default:
@@ -294,6 +346,7 @@ switch ("$cmd")
     
     # Inventory command
     case i:
+    case inventory:
         echo "You currently have:"
         set inv_dir = "../../usr/toukmond"
         if ( -d "$inv_dir" ) then # if inv_dir exists
@@ -334,6 +387,7 @@ switch ("$cmd")
         goto game_loop
 
     # Get command
+    case take:
     case get:
         if ( "$#args" < 2 ) then
             echo "You must supply an object."
@@ -404,7 +458,7 @@ switch ("$cmd")
 
                             # special objects handling
                             if ( "${object}" == "key.o" ) then          
-                                chmod 755 ../../rooms/old-building-hallway # when player get the key, change the permission of old-building-hallway to allow player to enter it
+                                set has_key = 1 # player get the key, enable to enter old-building-hallway
                             else if ( "${object}" == "bracelet.o" ) then
                                 mv emerald.o ../../usr/toukmond/ >& /dev/null
                             else if ( "${object}" == "board.o" ) then
@@ -486,8 +540,8 @@ switch ("$cmd")
             echo "Taken."
 
             # special objects handling
-            if ( "${object}" == "key.o" ) then          
-                chmod 755 ../../rooms/old-building-hallway # when player get the key, change the permission of old-building-hallway to allow player to enter it
+            if ( "${object}" == "key.o" ) then       
+                set has_key = 1 # player get the key, enable to enter old-building-hallway
             else if ( "${object}" == "bracelet.o" ) then
                 mv emerald.o ../../usr/toukmond/ >& /dev/null
             else if ( "${object}" == "board.o" ) then
@@ -501,6 +555,7 @@ switch ("$cmd")
 
     # Drop command
     case drop:
+    case throw:
         if ( "$#args" < 2 ) then
             echo "You must supply an object."
             goto game_loop
@@ -570,7 +625,7 @@ switch ("$cmd")
                     endif
                     breaksw
                 case key.o:
-                    chmod 755 ../../rooms/old-building-hallway # when player drop the key, change the permission of old-building-hallway
+                    set has_key = 0 # player lose the key, disable to enter old-building-hallway
                     breaksw
                 case bracelet.o:
                     mv emerald.o . >& /dev/null
@@ -606,6 +661,7 @@ switch ("$cmd")
 
     # Put command
     case put:
+    case insert:
         # Too few arguments, lost object1
         if ( "$#args" < 2 ) then
             echo "You must supply an object"

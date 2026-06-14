@@ -1,0 +1,26 @@
+
+Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>It is a normal shovel with a price tag attached that says $19.99.
+>>Dead end
+You are at a dead end of a dirt road.  The road goes to the east.
+In the distance you can see that it will eventually fork off.  The
+trees here are very tall royal palms, and they are spaced equidistant
+from each other.
+There is a shovel here.
+>
+You have scored 0 out of a possible 90 points.

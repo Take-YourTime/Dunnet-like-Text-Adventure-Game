@@ -22,8 +22,6 @@ drop nothing
 x nothing
 read nothing
 xyzzy
-foobar
-help
 ?
 12345
 get shovel extra words
@@ -73,7 +71,7 @@ s
 ne
 nw
 se
-sw
+s
 u
 d
 get boulder
@@ -165,7 +163,7 @@ se
 get bear
 drop food
 l
-sw
+s
 get all
 ne
 drop emerald
@@ -246,10 +244,11 @@ read vax
 put chip in vax
 get chip
 get chip
-e
+ne
 w
 i
 x paper
+put card in vax
 type
 toukmond
 robert
@@ -278,9 +277,10 @@ uncompress paper.o.gz
 ls
 ls -l
 uncompress paper.o.Z
+uncompress paper.o.gz
 cat paper.o
-exit
 e
+ne
 w
 i
 type

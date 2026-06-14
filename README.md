@@ -369,17 +369,17 @@ $args_padded[4]
 
 | 指令 | 作用 | 實作方式 |
 | --- | --- | --- |
-| `n`、`s`、`e`、`w`、</br>`ne`、`nw`、`se`、`sw`、</br>`u`、`d` | 移動到其他房間 | 檢查目前資料夾中是否存在相同名稱的 symbolic link，存在時使用 `cd` 進行移動，並透過 `pwd -P` 取得該房間絕對路徑。 |
-| `l`</br>`look`</br>`x`</br>`examine`</br>`read` | 用於查看目前房間詳細資訊 | 讀取目前房間中的 `description`，再讀取房間內的所有 `.o` 檔案，將檔名轉換為對應的物品描述並輸出。 |
-| `l <item>`</br>`look <item>`</br>`x <item>`</br>`examine <item>`</br>`read <item>`</br> | examine，檢查指定物品；若無輸入物品名稱，則變成輸出當前房間資訊，效果與`l`相同 | 根據玩家輸入的名稱，使用 `cat` 輸出對應物品的 `.o` 檔案 *(或一般檔案)* 中的文字內容。 |
+| `n`, `s`, `e`, `w`, </br> `ne`, `nw`, `se`, `sw`, </br> `u`, `d` | 移動到其他房間 | 檢查目前資料夾中是否存在相同名稱的 symbolic link，存在時使用 `cd` 進行移動，並透過 `pwd -P` 取得該房間絕對路徑。 |
+| `l`, </br> `look`, </br> `x`, </br> `examine`, </br> `read` | 用於查看目前房間詳細資訊 | 讀取目前房間中的 `description`，再讀取房間內的所有 `.o` 檔案，將檔名轉換為對應的物品描述並輸出。 |
+| `l <item>`, </br> `look`&nbsp;`<item>`, </br> `x`&nbsp;`item`, </br> `examine`&nbsp;`<item>`, </br> `read`&nbsp;`<item>` | 檢查指定物品；若無輸入物品名稱，則變成輸出當前房間資訊，效果與`l`相同 | 根據玩家輸入的名稱，使用 `cat` 輸出對應物品的 `.o` 檔案 *(或一般檔案)* 中的文字內容。 |
 | `i` | 查看 inventory | 列出 `../../usr/toukmond/`中，所有 `.o` 檔案的名稱，忽略 symbolic link。 |
 | `get <item>` | 撿取物品 | 使用 `mv` 將目前房間內的指定物品移動到 `../../usr/toukmond/`，再用 `touch` 更新 timestamp。 |
 | `get all` | 撿取房間內所有可撿取物品 | 使用 `ls -tr *.o` 找出物品，跳過隱藏物品 *(以`.`作為檔名開頭)* 、不可撿取物品，再依序移動到 inventory — `../../usr/toukmond/`。    若有撿取到帶有 symbolic link 的物品 (例如: cpu、bracelet)，需要同步移動 symbolic link 到 inventory 中。 |
 | `drop <item>` | 放下物品 | 使用 `mv` 將 inventory 內的物品移動到目前房間，再用 `touch` 更新 timestamp。 |
 | `dig` | 挖掘地面 | 先檢查 inventory 中是否擁有`shovel.o`。若玩家位於指定房間 `fork`，會顯示隱藏的 CPU board。 |
-| `put <item1> in <item2>` | 將物品放入另一個物品 | 目前主要用於將 CPU board 放入 computer，使 computer 啟動。  介係詞沒有硬性規定要使用`in`。 |
+| `put`&nbsp;`<item1>`&nbsp;`in`&nbsp;`<item2>` | 將物品放入另一個物品 | 目前主要用於將 CPU board 放入 computer，使 computer 啟動。  介係詞沒有硬性規定要使用`in`。 |
 | `type` | 操作 computer | 只有位於 `computer-room` 時有效。若 computer 已啟動，玩家可以進入 `pokey` 登入流程。 |
-| `exit`、`quit` | 結束遊戲 | 顯示目前分數後離開程式。 |
+| `exit`, `quit` | 結束遊戲 | 顯示目前分數後離開程式。 |
 
 ---
 
