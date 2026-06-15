@@ -456,7 +456,7 @@ $game_root/filesystem/pokey
 
 When handling `cd` and `ls`, the program temporarily uses the real `cd` and `pwd -P` to normalize paths, including:
 
-```plain
+```bash
 .
 ..
 repeated /
@@ -492,7 +492,7 @@ set pokey_root = "$game_root/filesystem/pokey"
 
 Normal adventure mode treats:
 
-```plain
+```bash
 :
 ;
 ,
@@ -555,7 +555,7 @@ unset noglob
 
 The `noglob` variable in `tcsh` disables filename substitution, so:
 
-```plain
+```bash
 *
 ?
 [abc]
