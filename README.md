@@ -1,5 +1,7 @@
 # Dunnet-like Text Adventure Game
 
+> > [English] | [繁體中文](README_zh-TW.md)
+
 Main program file: `dunnet`
 
 Programming language: C Shell (`csh` / `tcsh`)
