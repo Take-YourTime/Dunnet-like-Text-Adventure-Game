@@ -1,8 +1,12 @@
 # Dunnet-like Text Adventure Game
 
+主程式檔案：`dunnet`
+
 使用語言：C Shell (`csh` / `tcsh`)
 
-主程式檔案：`dunnet`
+作業系統：Ubuntu 20.04.6 LTS
+
+Linux kernel version：5.15.0-139-generic
 
 ## 壹、專案簡介
 
@@ -56,9 +60,9 @@ sudo apt update && sudo apt install -y emacs
 
 #### 檢查自製dunnet輸出結果
 
-若是想知道自製 dunnet 與原始 dunnet 是否一致，可以按照以下步驟執行。
+若是想知道自製 dunnet 與原始 dunnet 是否一致，可以按照以下步驟執行，或參考 demo files 資料中的 ReadMe.md。
 
-首先接著將 dunnet、filesystem.tar 與三份測試檔案放入同一個資料夾中。
+首先將 dunnet、filesystem.tar 與三份測試檔案放入同一個資料夾中。
 
 開啟terminal輸入：
 
@@ -90,10 +94,9 @@ diff -y -w my_output.txt standard_output.txt
 
 遊戲啟動時，程式會先將目前工作目錄切換至 script 所在的位置，再尋找 `filesystem.tar`。
 
-程式會依序檢查：
+程式會檢查：
 
 ```bash
-~/filesystem.tar
 ./filesystem.tar
 ```
 
@@ -125,7 +128,7 @@ se-nw-road
 
 每個房間資料夾中都包含 description， 其中儲存該房間的文字說明。
 
-需要注意的是，在原本的 Dunnet 中，**使用 pokey 無法找到 mailroom 資料夾的存在**！
+需要注意的是，在原本的 Dunnet 中，**使用 pokey 無法找到 mailroom 資料夾的存在**！但在此自製的 Dunnet 中可以找到。
 
 ```notion
 
@@ -168,19 +171,38 @@ dead-end -> e-w-dirt-road -> fork
 
 接著，程式再使用`pwd -P`取得 symbolic link 解析後的實體路徑，用於判斷玩家目前所在的房間。
 
-所有可能移動的方向如下：
+所有移動指令如下：
 
 ```bash
-u:  # up
-d:  # down
-n:  # north
-s:  # south
-e:  # east
-w:  # west
-ne: # northeast
-nw: # northwest
-se: # southeast
-sw: # southwest
+u
+up
+
+d
+down
+
+n
+north
+
+s
+south
+
+e
+east
+
+w
+west
+
+ne
+northeast
+
+nw
+northwest
+
+se
+southeast
+
+sw
+southwest
 ```
 
 ### 3. 使用 .o 檔案表示物品
@@ -372,14 +394,14 @@ $args_padded[4]
 | `n`, `s`, `e`, `w`, </br> `ne`, `nw`, `se`, `sw`, </br> `u`, `d` | 移動到其他房間 | 檢查目前資料夾中是否存在相同名稱的 symbolic link，存在時使用 `cd` 進行移動，並透過 `pwd -P` 取得該房間絕對路徑。 |
 | `l`, </br> `look`, </br> `x`, </br> `examine`, </br> `read` | 用於查看目前房間詳細資訊 | 讀取目前房間中的 `description`，再讀取房間內的所有 `.o` 檔案，將檔名轉換為對應的物品描述並輸出。 |
 | `l <item>`, </br> `look`&nbsp;`<item>`, </br> `x`&nbsp;`item`, </br> `examine`&nbsp;`<item>`, </br> `read`&nbsp;`<item>` | 檢查指定物品；若無輸入物品名稱，則變成輸出當前房間資訊，效果與`l`相同 | 根據玩家輸入的名稱，使用 `cat` 輸出對應物品的 `.o` 檔案 *(或一般檔案)* 中的文字內容。 |
-| `i` | 查看 inventory | 列出 `../../usr/toukmond/`中，所有 `.o` 檔案的名稱，忽略 symbolic link。 |
-| `get <item>` | 撿取物品 | 使用 `mv` 將目前房間內的指定物品移動到 `../../usr/toukmond/`，再用 `touch` 更新 timestamp。 |
-| `get all` | 撿取房間內所有可撿取物品 | 使用 `ls -tr *.o` 找出物品，跳過隱藏物品 *(以`.`作為檔名開頭)* 、不可撿取物品，再依序移動到 inventory — `../../usr/toukmond/`。    若有撿取到帶有 symbolic link 的物品 (例如: cpu、bracelet)，需要同步移動 symbolic link 到 inventory 中。 |
-| `drop <item>` | 放下物品 | 使用 `mv` 將 inventory 內的物品移動到目前房間，再用 `touch` 更新 timestamp。 |
+| `i`, </br> `inventory` | 查看玩家所持有的物品 | 列出 `../../usr/toukmond/`中，所有 `.o` 檔案的名稱，忽略 symbolic link。 |
+| `get <item>`, </br> `take <item>` | 撿取指定物品 | 使用 `mv` 將目前房間內指定的可撿取物品移動到 `../../usr/toukmond/`，再用 `touch` 更新 timestamp。 |
+| `get all`, </br> `take all` | 撿取房間內所有可撿取物品 | 使用 `ls -tr *.o` 找出物品，跳過隱藏物品 *(以`.`作為檔名開頭)* 、不可撿取物品，再依序移動到 inventory — `../../usr/toukmond/`。    若有撿取到帶有 symbolic link 的物品 (例如: cpu、bracelet)，需要同步移動 symbolic link 到 inventory 中。 |
+| `drop <item>`, </br> `throw <item>` | 放下物品 | 使用 `mv` 將 inventory 內的物品移動到目前房間，再用 `touch` 更新 timestamp。 |
 | `dig` | 挖掘地面 | 先檢查 inventory 中是否擁有`shovel.o`。若玩家位於指定房間 `fork`，會顯示隱藏的 CPU board。 |
-| `put`&nbsp;`<item1>`&nbsp;`in`&nbsp;`<item2>` | 將物品放入另一個物品 | 目前主要用於將 CPU board 放入 computer，使 computer 啟動。  介係詞沒有硬性規定要使用`in`。 |
+| `put`&nbsp;`<item1>`&nbsp;`in`&nbsp;`<item2>`, </br> `insert`&nbsp;`<item1>`&nbsp;`in`&nbsp;`<item2>` | 將物品放入另一個物品 | 目前主要用於將 CPU board 放入 computer，使 computer 啟動。  介係詞沒有硬性規定要使用`in`。 |
 | `type` | 操作 computer | 只有位於 `computer-room` 時有效。若 computer 已啟動，玩家可以進入 `pokey` 登入流程。 |
-| `exit`, `quit` | 結束遊戲 | 顯示目前分數後離開程式。 |
+| `exit`, `quit` | 結束遊戲 | 終止程式。 |
 
 ---
 
@@ -461,7 +483,7 @@ set pokey_root = "$game_root/filesystem/pokey"
 | `ls <path>` | 顯示指定目錄內容 | 先將相對路徑或絕對路徑正規化，再顯示對應目錄。 |
 | `cd <path>` | 切換 Pokey 工作目錄 | 正規化目標路徑後更新 `pokey_pwd`，不會修改到遊戲本體的真實工作路徑。 |
 | `cat <file>` | 顯示 ASCII file 內容 | 僅允許讀取目前資料夾內的部分文字檔案，例如 `description`。 |
-| `uncompress`  | 解壓縮檔案 | 使用 `gunzip` 解壓縮指定檔案，目前遊戲可解壓縮的檔案為 `paper.o.gz`。 |
+| `uncompress` | 解壓縮檔案 | 使用 `gunzip` 解壓縮指定檔案，目前遊戲可解壓縮的檔案為 `paper.o.gz` *(原始 Dunnet 中為`paper.o.Z`)*。 |
 | `ftp` | *尚未完成* | *非作業要求，功能尚未實作。* |
 | `rlogin` | *尚未完成* | *非作業要求，功能尚未實作。* |
 | `ssh` | *尚未完成* | *非作業要求，功能尚未實作。* |

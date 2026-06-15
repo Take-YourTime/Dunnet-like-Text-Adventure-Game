@@ -41,7 +41,7 @@ if ( -f ./filesystem.tar ) then
     # Create symbolic link for old-building-hallway/sw to building-front
     ln -sf ../building-front filesystem/pokey/rooms/old-building-hallway/sw
 else if ( ! -d filesystem ) then
-    echo "Error: filesystem.tar not found and filesystem directory does not exist."
+    echo "Error: filesystem.tar or filesystem directory not found."
     exit 1
 endif
 
@@ -345,8 +345,8 @@ switch ("$cmd")
         goto game_loop
     
     # Inventory command
-    case i:
     case inventory:
+    case i:
         echo "You currently have:"
         set inv_dir = "../../usr/toukmond"
         if ( -d "$inv_dir" ) then # if inv_dir exists
@@ -554,8 +554,8 @@ switch ("$cmd")
         goto game_loop
 
     # Drop command
-    case drop:
     case throw:
+    case drop:
         if ( "$#args" < 2 ) then
             echo "You must supply an object."
             goto game_loop
@@ -660,8 +660,8 @@ switch ("$cmd")
         goto game_loop
 
     # Put command
-    case put:
     case insert:
+    case put:
         # Too few arguments, lost object1
         if ( "$#args" < 2 ) then
             echo "You must supply an object"
