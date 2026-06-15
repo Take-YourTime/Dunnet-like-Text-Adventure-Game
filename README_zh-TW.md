@@ -66,7 +66,7 @@ sudo apt update && sudo apt install -y emacs
 
 首先將 dunnet、filesystem.tar 與三份測試檔案放入同一個資料夾中。
 
-開啟terminal輸入：
+開啟terminal，輸入：
 
 ```bash
 ./dunnet < testactions > my_output.txt
@@ -458,7 +458,7 @@ $game_root/filesystem/pokey
 
 處理 `cd` 與 `ls` 時，程式會暫時使用真實的 `cd` 與 `pwd -P` 正規化路徑，處理：
 
-```plain
+```bash
 .
 ..
 重複的 /
@@ -494,7 +494,7 @@ set pokey_root = "$game_root/filesystem/pokey"
 
 一般冒險模式會將：
 
-```plain
+```bash
 :
 ;
 ,
@@ -557,7 +557,7 @@ unset noglob
 
 `tcsh` 的 `noglob` 變數會停用 filename substitution，因此：
 
-```plain
+```bash
 *
 ?
 [abc]
