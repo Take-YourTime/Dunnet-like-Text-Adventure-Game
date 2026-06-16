@@ -12,7 +12,7 @@ Linux kernel version：5.15.0-139-generic
 
 ## 壹、專案簡介
 
-本專案為課程UNIX system programing的作業，作業要求完成一個類似 **Dunnet 的**文字冒險遊戲，所有操作與輸出結果均需與原始 Dunnet 一致，不過不需要完成完整的遊戲流程，僅需實做到能讓玩家透過 pokey 找出森林中隱藏的寶藏即可。
+本專案為課程 UNIX system programing 的作業，作業要求完成一個類似 **Dunnet 的**文字冒險遊戲，所有操作與輸出結果均需與原始 Dunnet 一致，不過不需要完成完整的遊戲流程，僅需實做到能讓玩家透過 pokey 找出森林中隱藏的寶藏即可。
 
 此專案使用 `csh` script 來進行撰寫，玩家可以在不同房間之間移動、檢查物品、撿取或放下道具，並透過與場景中的物件互動推進遊戲。遊戲中也包含一個模擬 UNIX 環境的電腦 - pokey。玩家啟動 pokey 並成功登入後，可以輸入簡化版 UNIX 指令，例如 `ls`、`cd`、`pwd`、`cat` 與 `uncompress`……等等。
 
@@ -44,7 +44,7 @@ chmod +x dunnet
 
 ### 測試步驟
 
-請先確保當前Linux或UNIX已經下載`emacs`：
+請先確保當前 Linux 或 UNIX 已經下載`emacs`：
 
 ```bash
 sudo apt update && sudo apt install -y emacs
@@ -52,7 +52,7 @@ sudo apt update && sudo apt install -y emacs
 
 接著將 dunnet 與 filesystem.tar 同一個資料夾中。
 
-開啟terminal輸入：
+開啟 terminal 輸入：
 
 ```bash
 ./dunnet
@@ -60,29 +60,29 @@ sudo apt update && sudo apt install -y emacs
 
 即可開始遊戲。
 
-#### 檢查自製dunnet輸出結果
+#### 檢查自製 dunnet 輸出結果
 
 若是想知道自製 dunnet 與原始 dunnet 是否一致，可以按照以下步驟執行，或參考 demo files 資料中的 ReadMe.md。
 
 首先將 dunnet、filesystem.tar 與三份測試檔案放入同一個資料夾中。
 
-開啟terminal，輸入：
+開啟 terminal，輸入：
 
 ```bash
 ./dunnet < testactions > my_output.txt
 ```
 
-這會將測試結果輸出到 my_output.txt 當中，testactions可更換成其他的測試檔案名稱。
+這會將測試結果輸出到 my_output.txt 當中，testactions 可更換成其他的測試檔案名稱。
 
 然後複製所有測試檔案到另外一個資料夾。
 
-開啟terminal，輸入：
+開啟 terminal，輸入：
 
 ```bash
 emacs -batch -l dunnet < testactions > standard_output.txt
 ```
 
-這會將原始dunnet的執行結果出到 standard_output.txt 當中。
+這會將原始 dunnet 的執行結果出到 standard_output.txt 當中。
 
 接著我們 my_output.txt 和 standard_output.txt 移到同一個資料夾，開啟 terminal 輸入：
 
