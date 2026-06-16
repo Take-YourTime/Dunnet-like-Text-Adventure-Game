@@ -33,7 +33,7 @@ Linux 或 UNIX 系統，且需支援：
 
 將 dunnet 與 `filesystem.tar` 放在同一個資料夾中。
 
-接著在 ternumal 輸入：
+接著在 terminal 輸入：
 
 ```bash
 chmod +x dunnet
