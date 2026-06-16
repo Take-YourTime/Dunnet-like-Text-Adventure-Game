@@ -31,7 +31,7 @@ A Linux or UNIX system is required, and the following must be supported:
 
 ### Execution Steps
 
-Place `dunnet` and `filesystem.tar` in the same directory.
+Place `dunnet` and `filesystem.tar` in a same directory.
 
 Then enter the following in the terminal:
 
