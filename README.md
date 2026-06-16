@@ -51,17 +51,15 @@ First, make sure that `emacs` has been installed on the current Linux or UNIX sy
 sudo apt update && sudo apt install -y emacs
 ```
 
-Then place `dunnet` and `filesystem.tar` in the same directory.
-
 Open a terminal and enter:
 
 ```bash
-./dunnet
+emacs -batch -l dunnet
 ```
 
-This will start the game.
+This will start the original Dunnet, you can check the output is the same as the self-made Dunnet or not.
 
-#### Checking the Output of the Custom Dunnet Implementation
+#### Checking the Output of the Custom Dunnet Implementation by Entering Commands Files
 
 To check whether the custom Dunnet output is consistent with the original Dunnet, follow the steps below, or refer to the ReadMe.md file in the demo files directory.
 
@@ -85,7 +83,7 @@ emacs -batch -l dunnet < testactions > standard_output.txt
 
 This writes the execution result of the original Dunnet to `standard_output.txt`.
 
-Next, move `my_output.txt` and `standard_output.txt` into the same directory. Open a terminal and enter:
+Next, move `my_output.txt` and `standard_output.txt` into a same directory. Open a terminal and enter:
 
 ```bash
 diff -y -w my_output.txt standard_output.txt
