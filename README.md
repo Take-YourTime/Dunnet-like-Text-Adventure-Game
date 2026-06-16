@@ -2,13 +2,13 @@
 
 > [English] | [繁體中文](README_zh-TW.md)
 
-Main program file: `dunnet`
+**Main program file**: `dunnet`
 
-Programming language: C Shell (`csh` / `tcsh`)
+**Programming language**: C Shell (`csh` / `tcsh`)
 
-Operating system: Ubuntu 20.04.6 LTS
+**Operating system**: Ubuntu 20.04.6 LTS
 
-Linux kernel version: 5.15.0-139-generic
+**Linux kernel version**: 5.15.0-139-generic
 
 ## 1. Project Overview
 
