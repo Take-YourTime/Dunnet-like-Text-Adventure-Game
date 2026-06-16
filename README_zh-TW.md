@@ -37,6 +37,7 @@ Linux 或 UNIX 系統，且需支援：
 
 ```bash
 chmod +x dunnet
+
 ./dunnet
 ```
 
