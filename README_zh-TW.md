@@ -56,10 +56,10 @@ sudo apt update && sudo apt install -y emacs
 開啟 terminal 輸入：
 
 ```bash
-./dunnet
+emacs -batch -l dunnet
 ```
 
-即可開始遊戲。
+即可啟動原始的 Dunnet。
 
 #### 檢查自製 dunnet 輸出結果
 
