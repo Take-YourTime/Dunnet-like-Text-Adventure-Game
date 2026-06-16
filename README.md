@@ -37,6 +37,7 @@ Then enter the following in the terminal:
 
 ```bash
 chmod +x dunnet
+
 ./dunnet
 ```
 
