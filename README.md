@@ -4,7 +4,7 @@
 
 **Main program file**: `dunnet`
 
-**Programming language**: C Shell (`csh` / `tcsh`)
+**Programming language**: C Shell (`csh`)
 
 **Operating system**: Ubuntu 20.04.6 LTS
 
