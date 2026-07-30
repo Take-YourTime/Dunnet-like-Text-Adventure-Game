@@ -16,6 +16,21 @@ This project is an assignment for the UNIX system programming course. The assign
 
 This project is written as a `csh` script. Players can move between different rooms, inspect objects, pick up or drop items, and progress through the game by interacting with objects in the scene. The game also includes a computer named pokey that simulates a UNIX environment. After starting pokey and logging in successfully, the player can enter simplified UNIX commands such as `ls`, `cd`, `pwd`, `cat`, `uncompress`, and so on.
 
+- **Dunnet-inspired text adventure gameplay** — Players can explore different locations, examine their surroundings, pick up or drop items, solve puzzles, and search for treasure hidden in the forest.
+
+- **Written in C Shell** — The game loop, command parser, state management, item interactions, and virtual terminal environment are implemented using csh scripts and standard UNIX utilities.
+
+- **Linux file-system-based game design** — Directories represent rooms, symbolic links represent movement paths, and files represent interactive objects, directly incorporating UNIX file-system concepts into the game architecture.
+
+- **A computer within the computer** — The game features an operable in-game computer named Pokey, which provides a UNIX-like environment supporting simplified commands such as ls, cd, pwd, cat, echo, and uncompress.
+Flexible command parsing — The game supports command aliases and case-insensitive input. Many commands can be entered in multiple forms, while certain commands also accept delimiters such as spaces, commas, colons, and semicolons.
+
+- **Stateful item and puzzle system** — Item locations, the player's inventory, file permissions, hidden objects, and room states change dynamically in response to the player's actions.
+
+- **Reproducible initial game state** — Each time the game starts, filesystem.tar is extracted again to restore the game file system to its original state.
+
+- **Compatibility testing against the original Dunnet** — The project includes command test files and an output comparison process for verifying whether its behavior is consistent with the original Dunnet.
+
 ---
 
 ## 2. How to Run
