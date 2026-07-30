@@ -16,6 +16,8 @@ This project is an assignment for the UNIX system programming course. The assign
 
 This project is written as a `csh` script. Players can move between different rooms, inspect objects, pick up or drop items, and progress through the game by interacting with objects in the scene. The game also includes a computer named pokey that simulates a UNIX environment. After starting pokey and logging in successfully, the player can enter simplified UNIX commands such as `ls`, `cd`, `pwd`, `cat`, `uncompress`, and so on.
 
+### Features
+
 - **Dunnet-inspired text adventure gameplay** — Players can explore different locations, examine their surroundings, pick up or drop items, solve puzzles, and search for treasure hidden in the forest.
 
 - **Written in C Shell** — The game loop, command parser, state management, item interactions, and virtual terminal environment are implemented using csh scripts and standard UNIX utilities.
