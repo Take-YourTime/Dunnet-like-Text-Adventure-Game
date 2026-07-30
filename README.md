@@ -25,7 +25,8 @@ This project is written as a `csh` script. Players can move between different ro
 - **Linux file-system-based game design** — Directories represent rooms, symbolic links represent movement paths, and files represent interactive objects, directly incorporating UNIX file-system concepts into the game architecture.
 
 - **A computer within the computer** — The game features an operable in-game computer named Pokey, which provides a UNIX-like environment supporting simplified commands such as ls, cd, pwd, cat, echo, and uncompress.
-Flexible command parsing — The game supports command aliases and case-insensitive input. Many commands can be entered in multiple forms, while certain commands also accept delimiters such as spaces, commas, colons, and semicolons.
+
+- **Flexible command parsing** — The game supports command aliases and case-insensitive input. Many commands can be entered in multiple forms, while certain commands also accept delimiters such as spaces, commas, colons, and semicolons.
 
 - **Stateful item and puzzle system** — Item locations, the player's inventory, file permissions, hidden objects, and room states change dynamically in response to the player's actions.
 
