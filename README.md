@@ -1,6 +1,6 @@
 # Dunnet-like Text Adventure Game
 
-![Kotlin](https://img.shields.io/badge/Language-csh-blue.svg) 
+![Kotlin](https://img.shields.io/badge/Language-csh-brightgreen.svg) 
 
 > [English] | [繁體中文](README_zh-TW.md)
 
