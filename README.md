@@ -1,5 +1,7 @@
 # Dunnet-like Text Adventure Game
 
+![Kotlin](https://img.shields.io/badge/Language-csh-blue.svg) 
+
 > [English] | [繁體中文](README_zh-TW.md)
 
 **Main program file**: `dunnet`
